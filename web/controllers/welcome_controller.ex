@@ -1,5 +1,6 @@
 defmodule Ecommerce.WelcomeController do
   use Ecommerce.Web, :controller
+ 
 
   def index(conn, _params) do
     render conn, "index.html"

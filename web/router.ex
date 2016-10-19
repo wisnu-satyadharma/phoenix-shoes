@@ -1,5 +1,6 @@
 defmodule Ecommerce.Router do
   use Ecommerce.Web, :router
+  use Addict.RoutesHelper
 
   pipeline :browser do
     plug :accepts, ["html"]
@@ -18,6 +19,9 @@ defmodule Ecommerce.Router do
 
     get "/", WelcomeController, :index
   end
+  scope "/" do
+    addict :routes
+  end  
 
   # Other scopes may use custom stacks.
   # scope "/api", Ecommerce do

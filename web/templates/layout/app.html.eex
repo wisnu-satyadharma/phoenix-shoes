@@ -20,8 +20,8 @@
     <script src="<%= static_path(@conn, "/js/jquery-ui.min.js") %>"></script>
   </head>
 
-  <body>
-    <%= render Ecommerce.SharedView, "_header.html" %>
+  <body>      
+    <%= render Ecommerce.SharedView, "_header.html", conn: @conn %>
     <%= render Ecommerce.SharedView, "_slider.html" %>
     <div class="clear"> </div>
     <div class="wrap">
